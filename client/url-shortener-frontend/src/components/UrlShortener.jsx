@@ -29,7 +29,7 @@ const UrlShortener = () => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+    <div className="max-w-2xl mx-auto bg-white rounded-lg pt-10 shadow-lg overflow-hidden">
       <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-6">
         <h2 className="text-2xl font-bold text-white">URL Shortener</h2>
         <p className="text-blue-100 mt-2">Create short, memorable links for your URLs</p>
@@ -94,12 +94,12 @@ const UrlShortener = () => {
             <div className="flex items-center">
               <div className="flex-grow bg-white p-3 rounded-l-md border border-r-0 border-gray-300 truncate">
                 <a
-                  href={`/${shortUrl}`}
+                  href={`/redirect/${shortUrl}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-600 hover:text-blue-800 hover:underline break-all"
                 >
-                  {`${window.location.origin}/${shortUrl}`}
+                  {`${window.location.origin}/redirect/${shortUrl}`}
                 </a>
               </div>
               <button

@@ -16,6 +16,7 @@ const Login = () => {
     onSuccess: (data) => {
       dispatch(login({ token: data.token }));
       console.log(data);
+      localStorage.setItem("token",data.token)
       navigate("/dashboard");
     },
     onError: (error) => {

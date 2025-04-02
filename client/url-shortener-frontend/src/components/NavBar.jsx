@@ -6,7 +6,7 @@ export const NavBar = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const dispatch = useDispatch();
-  const isAuthenticated = useSelector((state) => state.auth.user);
+  const isAuthenticated = useSelector((state) => state.auth.token);
   
   const isActive = (path) => {
     return location.pathname === path ? "bg-blue-600" : "";
